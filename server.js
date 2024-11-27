@@ -54,9 +54,7 @@ app.delete('/clientes/:id', (req,res)=>{
     }
 });
 
-
 // Rotas para Animais
-
 //Rota GET para listar todos os animais
 app.get('/animais', (req, res) => {
     res.json(animais);
@@ -100,6 +98,8 @@ app.delete('/animais/:id', (req, res) => {
         res.status(404).json({ message: 'Animal não encontrado' });
     }
 });
+
+// Rotas para Consultas
 //Rota GET para listar todas as consultas
 app.get('/consultas', (req, res) => {
     res.json(consultas);
