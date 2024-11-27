@@ -56,16 +56,18 @@ app.delete('/clientes/:id', (req,res)=>{
 
 
 // Rotas para Animais
+
+//Rota GET para listar todos os animais
 app.get('/animais', (req, res) => {
     res.json(animais);
 });
-
+//Rota POST para criar um novo animal
 app.post('/animais', (req, res) => {
     const animal = req.body;
     animais.push(animal);
     res.status(201).json(animal);
 });
-
+//Rota PUT para atualizar um animal existente 
 app.put('/animais/:id', (req, res) => {
     const id = req.params.id;
     const animalIndex = animais.findIndex(a => a.id === id);
@@ -76,7 +78,7 @@ app.put('/animais/:id', (req, res) => {
         res.status(404).json({ message: 'Animal não encontrado' });
     }
 });
-
+//Rota PATCH para atualizar parcialmente um animal
 app.patch('/animais/:id', (req, res) => {
     const id = req.params.id;
     const animalIndex = animais.findIndex(a => a.id === id);
@@ -87,7 +89,7 @@ app.patch('/animais/:id', (req, res) => {
         res.status(404).json({ message: 'Animal não encontrado' });
     }
 });
-
+//Rota DELETE para remover um animal
 app.delete('/animais/:id', (req, res) => {
     const id = req.params.id;
     const animalIndex = animais.findIndex(a => a.id === id);
@@ -98,16 +100,17 @@ app.delete('/animais/:id', (req, res) => {
         res.status(404).json({ message: 'Animal não encontrado' });
     }
 });
-
+//Rota GET para listar todas as consultas
 app.get('/consultas', (req, res) => {
     res.json(consultas);
 });
-
+//Rota POST para criar uma nova consulta
 app.post('/consultas', (req, res) => {
     const consulta = req.body;
     consultas.push(consulta);
     res.status(201).json(consulta);
 });
+//Rota PUT para atualizar uma consulta existente 
 app.put('/consultas/:id', (req, res) => {
     const id = req.params.id;
     const consultaIndex = consultas.findIndex(b => b.id === id);
@@ -118,7 +121,7 @@ app.put('/consultas/:id', (req, res) => {
         res.status(404).json({ message: 'Consulta não encontrada' });
     }
 });
-
+//Rota PATCH para atualizar parcialmente uma consulta
 app.patch('/consultas/:id', (req, res) => {
     const id = req.params.id;
     const consultaIndex = consultas.findIndex(b => b.id === id);
@@ -129,7 +132,7 @@ app.patch('/consultas/:id', (req, res) => {
         res.status(404).json({ message: 'Consulta não encontrada' });
     }
 });
-
+//Rota DELETE para remover uma consulta
 app.delete('/consultas/:id', (req, res) => {
     const id = req.params.id;
     const consultaIndex = consultas.findIndex(b => b.id === id);
