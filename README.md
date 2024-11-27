@@ -31,7 +31,7 @@ A API permite as seguintes operações:
 
 - **Node.js**: Certifique-se de ter o Node.js instalado em seu sistema. Você pode baixar a versão mais recente em [https://nodejs.org/](https://nodejs.org/).
 
-- **Body-Parser**: A API utiliza o **body-parser** para processar o corpo das requisições. Certifique-se de instalar as dependências corretamente (veja a seção de instalação).
+- **Body-Parser**: A API utiliza o **body-parser** para processar o corpo das requisições. Certifique-se de instalar as dependências corretamente.
 
 ## Instalação
 
